@@ -1,0 +1,9 @@
+netstat -rn
+sudo route add -net 192.168.3.0 gw 192.168.1.1 netmask 255.255.255.0 dev enp4s0
+netstat -rn 
+sudo route del-net 192.168.3.0 gw 192.168.1.1 netmask 255.255.255.0 dev enp4s0
+netstat -rn 
+sudo route add default gw 192.168.1.1
+netstat -rn 
+sudo route deldefault gw 192.168.1.1
+netstat -rn 

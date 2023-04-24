@@ -1,0 +1,37 @@
+ifconfig
+ping google.com
+tracepath www.google.com
+traceroute www.google.com
+hose www.google.com
+nslookup google.com
+netsat -an
+dig google.com
+route -n
+arp -a
+sudo apt-get install rarpd   rarp 00:11:22:33:44:55
+ip addr show
+ifconfig eth0
+
+Ping: Test connectivity between devices on a network by sending a packet of data to a specified IP address or hostname using "ping".
+
+Tracert: Trace the path that a packet of data takes between devices on a network using "traceroute".
+
+Nslookup: Retrieve information about a specific hostname or IP address by querying DNS servers using "nslookup".
+
+Netstat: Display information about active network connections and related statistics using "netstat".
+
+Route: Display and modify the network routing table on a device using "route"
+
+ARP: Map a device's IP address to its physical MAC address using "arp -a".
+
+RARP: Map a device's physical MAC address to its IP address using the "rarpd" daemon (not commonly used anymore).
+
+IP: Display the IP configuration of a Linux machine using "ip addr show".
+
+ifconfig: Display and configure network interfaces on a Linux machine using "ifconfig [interface]".
+
+dig: Query DNS servers for information about a specific domain name or IP address using "dig [domain name or IP address]".
+
+
+
+

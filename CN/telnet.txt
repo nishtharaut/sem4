@@ -1,0 +1,6 @@
+sudo apt-get install telnetd
+sudo /etc/init.d.open-bsd-inetd restart
+telnet 122.175.140.221
+enter username and password
+mkdir demo
+rmdir demo 
