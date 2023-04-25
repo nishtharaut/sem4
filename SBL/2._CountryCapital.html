@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country Capitals</title>
+    <style>
+        #capital {
+            font-weight: bold;
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <label for="country-select">Select a country:</label>
+    <select id="country-select" onchange="displayCapital()">
+        <option value="India">India</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="China">China</option>
+        <option value="USA">USA</option>
+        <option value="Russia">Russia</option>
+    </select>
+    <div id="capital"></div>
+    <script>
+        const capitals = {
+            India: "New Delhi",
+            Pakistan: "Islamabad",
+            China: "Beijing",
+            USA: "Washington, D.C.",
+            Russia: "Moscow"
+        };
+
+        function displayCapital() {
+            const select = document.getElementById("country-select");
+            document.getElementById("capital").innerHTML = capitals[select.value];
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fade In/Fade Out Effects Demo</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #content {
+      background-color: #f8f8f8;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fade In/Fade Out Effects Demo</h1>
+  <button id="fadeInBtn">Fade In</button>
+  <button id="fadeOutBtn">Fade Out</button>
+  <div id="content">
+    <p>This is a doggo that can be shown or hidden using fade in/fade out effects.</p>
+    <img src="https://media.discordapp.net/attachments/919421889154256937/1099690180975280158/artworks-000596536556-cwl06b-t500x500.png?width=1000&height=1000">
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      // fadeIn() effect
+      $("#fadeInBtn").click(function() {
+        $("#content").fadeIn();
+      });
+
+      // fadeOut() effect
+      $("#fadeOutBtn").click(function() {
+        $("#content").fadeOut();
+      });
+    });
+  </script>
+</body>
+</html>

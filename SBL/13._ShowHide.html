@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show/Hide Effects</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #content {
+      background-color: #f8f8f8;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Show/Hide Effects Demo</h1>
+  <button id="showBtn">Show</button>
+  <button id="hideBtn">Hide</button>
+  <div id="content">
+    <p>This is a doggo that can be shown or hidden using show/hide effects.</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfjvapVVrd4mmnPxcEI5Ze1ZQfFBdpyWS0Og">
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      // show() effect
+      $("#showBtn").click(function() {
+        $("#content").show();
+      });
+
+      // hide() effect
+      $("#hideBtn").click(function() {
+        $("#content").hide();
+      });
+    });
+  </script>
+</body>
+</html>

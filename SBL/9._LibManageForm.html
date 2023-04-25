@@ -1,0 +1,49 @@
+<head>
+  <h1>Registration form for Library</h1>
+    <title>Registration Form</title>
+  <script>function validateName() {
+  const nameInput = document.getElementById('name');
+  const nameValue = nameInput.value.trim();
+
+  if (nameValue.length < 2) {
+    nameInput.setCustomValidity('Name must be at least 2 characters long.');
+    return false;
+  } else if (!/^[a-zA-Z ]+$/.test(nameValue)) {
+    nameInput.setCustomValidity('Name can only contain letters and spaces.');
+    return false;
+  } else {
+    nameInput.setCustomValidity('');
+    return true;
+  }
+}
+
+document.getElementById('registration-form').addEventListener('submit', function(event) {
+  if (!validateName()) {
+    event.preventDefault();
+  }
+});</script>
+</head>
+
+
+<form id="registration-form" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+  <br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <br>
+  <label for="rollno">Rollno:</label>
+  <input type="text" id="rollno" name="rollno" required>
+  <br>
+  <label for="dob">Date of birth:</label>
+  <input type="date" id="dob" name="dob" required>
+  <br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+  <br>
+  <label for="confirm-password">Confirm Password:</label>
+  <input type="password" id="confirm-password" name="confirm-password" required>
+  <br>
+  
+  <input type="submit" value="Register">
+</form>

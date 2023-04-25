@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Railway Reservation</title>
+  <script>
+    function validateName() {
+      const nameInput = document.getElementById('name');
+      const nameValue = nameInput.value.trim();
+
+      if (nameValue.length < 2) {
+        nameInput.setCustomValidity('Name must be at least 2 characters long.');
+        return false;
+      } else if (!/^[a-zA-Z ]+$/.test(nameValue)) {
+        nameInput.setCustomValidity('Name can only contain letters and spaces.');
+        return false;
+      } else {
+        nameInput.setCustomValidity('');
+        return true;
+      }
+    }
+
+    function validateDate() {
+      const dateInput = document.getElementById('dod');
+      const dateValue = dateInput.value;
+
+      const today = new Date();
+      const selectedDate = new Date(dateValue);
+
+      if (selectedDate < today) {
+        dateInput.setCustomValidity('Date must be in the future.');
+        return false;
+      } else {
+        dateInput.setCustomValidity('');
+        return true;
+      }
+    }
+
+    document.getElementById('registration-form').addEventListener('submit', function(event) {
+      if (!validateName() || !validateDate()) {
+        event.preventDefault();
+      }
+    });
+  </script>
+</head>
+</head>
+</html>
+<head>
+ 
+
+
+<body>
+<form id="registration-form" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+  <br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <br><br>
+  <label for="Phone">Phone No:</label>
+  <input type="text" id="phoneno" name="phoneno" required>
+  <br><br>
+  <label for="name">Passenger ID:</label>
+  <input type="text" id="pid" name="pid" required>
+  <br><br>
+  <h1>Reservation:</h1>
+  <br>
+  <label for="name">From:</label>
+  <input type="text" id="from" name="from" required>
+  <br><br>
+  <label for="name">To:</label>
+  <input type="text" id="to" name="to" required>
+  <br><br>
+  <label for="dod">Date:</label>
+  <input type="date" id="dod" name="dod" required>
+  <br><br>
+  <h3>Select Class</h3>
+  <select id="Select Class" onchange="Class:()">
+    <option value="General">General</option>
+    <option value="Sleeper">Sleeper</option>
+    <option value="First Classs">First Class</option>
+    <option value="Second Classs">Second Class</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Register">
+</form>
+</body>
